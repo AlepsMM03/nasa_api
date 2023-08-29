@@ -46,3 +46,12 @@ function mostrarDatos({date, explanation, media_type, title, url}){
         multimedia.innerHTML = `<img src="${url}" class="img-fluid" alt="${url}">`
     }
 }
+// Obtener la fecha actual en formato YYYY-MM-DD
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+// Obtener el elemento input
+const fechaInput = document.getElementById('fecha-input');
+
+// Establecer el atributo "max" del input a la fecha actual
+fechaInput.setAttribute('max', today.toISOString().split('T')[0]);
