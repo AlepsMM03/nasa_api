@@ -1,8 +1,8 @@
 window.addEventListener('load', obtenerDatos);
 
 function obtenerDatos() {
-    const Nasa_api = 'rhyvgZUUTXrtNMFjFisAhte3a0Ud7wQYv9xN9AGs';
-    const ruta = `https://api.nasa.gov/planetary/apod?api_key=${Nasa_api}`;
+    const API_KEY = 'rhyvgZUUTXrtNMFjFisAhte3a0Ud7wQYv9xN9AGs';
+    const ruta = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`;
 
     fetch(ruta)
     .then(respuesta => respuesta.json())
@@ -17,8 +17,8 @@ function obtenerDatos() {
 function buscarFotoPorFecha() {
     const fechaInput = document.querySelector('#fecha-input').value;
     if (fechaInput) {
-        const Nasa_api = 'rhyvgZUUTXrtNMFjFisAhte3a0Ud7wQYv9xN9AGs';
-        const ruta = `https://api.nasa.gov/planetary/apod?api_key=${Nasa_api}&date=${fechaInput}`;
+        const API_KEY = 'rhyvgZUUTXrtNMFjFisAhte3a0Ud7wQYv9xN9AGs';
+        const ruta = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${fechaInput}`;
 
         fetch(ruta)
         .then(respuesta => respuesta.json())
@@ -64,12 +64,9 @@ function mostrarDatos({date, explanation, media_type, title, url}) {
     }
 }
 
-// Obtener la fecha actual en formato YYYY-MM-DD
 const today = new Date();
 today.setHours(0, 0, 0, 0);
 
-// Obtener el elemento input
 const fechaInput = document.getElementById('fecha-input');
 
-// Establecer el atributo "max" del input a la fecha actual
 fechaInput.setAttribute('max', today.toISOString().split('T')[0]);
