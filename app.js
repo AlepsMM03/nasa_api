@@ -24,10 +24,10 @@ function buscarFotoPorFecha() {
         .then(respuesta => respuesta.json())
         .then(resultado => mostrarDatos(resultado))
         .catch(error => {
-            console.error('Error al buscar foto:', error);
+           // console.error('Error al buscar foto:', error);
         });
     } else {
-        console.log('Ingrese una fecha válida.');
+       // console.log('Ingrese una fecha válida.');
     }
 }
 

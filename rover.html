@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos de Marte</title>
+    <link rel="icon" href="icon-nasa.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        /* Estilo para el modal */
+        .modal-content {
+            background-color: #333;
+            color: white;
+        }
+        .modal-link {
+            color: white;
+        }
+        /* Agrega estilos CSS personalizados aquí */
+        .center-input {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #fecha-input {
+            max-width: 150px;
+        }
+        .modal-link {
+            color: inherit;
+            text-decoration: none;
+        }
+        .modal-link:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="nasa-icon.png" alt="NASA Icon" width="45" height="35" class="d-inline-block align-text-top">
+                NASA
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" id="astronomia">Astronomía</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="rover.html" id="marte">Marte</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <h4 class="mb-3">Fotos de Marte</h4>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-6 text-center">
+                <h4 class="mb-3">Busca una foto</h4>
+                <div class="input-group mb-3 center-input">
+                    <input type="date" id="fecha-input" class="form-control">
+                    <button id="buscar-btn" class="btn btn-primary">Buscar</button>
+                </div>
+            </div>
+        </div>
+        <div id="contenido"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="rover.js"></script>
+</body>
+</html>
